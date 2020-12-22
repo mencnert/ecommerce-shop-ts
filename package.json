@@ -51,7 +51,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run prettify && npm run lint && npm test",
+      "pre-commit": "echo \"this should fail\" && exit 1",
       "pre-push": "npm run lint && npm test"
     }
   },
