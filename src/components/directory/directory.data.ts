@@ -31,7 +31,8 @@ const SECTIONS: Section[] = [
     size: "large",
     id: 4,
     linkUrl: "shop/womens",
-  }, {
+  },
+  {
     title: "mens",
     imageUrl: "https://i.ibb.co/R70vBrQ/men.png",
     size: "large",

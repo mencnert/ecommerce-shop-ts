@@ -27,6 +27,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "test:all": "react-scripts test --watchAll=false",
     "eject": "react-scripts eject",
     "prettify": "npx prettier --write .",
     "lint": "eslint src"
@@ -51,8 +52,8 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "echo \"this should fail\" && exit 1",
-      "pre-push": "npm run lint && npm test"
+      "pre-commit": "npm run prettify && npm run lint && npm run test:all",
+      "pre-push": "npm run lint && npm run test:all"
     }
   },
   "devDependencies": {
