@@ -12,6 +12,7 @@ const MenuItem = ({
   size,
   linkUrl,
   history,
+  
   match,
 }: Props) => {
   return (
