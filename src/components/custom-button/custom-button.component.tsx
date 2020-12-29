@@ -1,14 +1,14 @@
-import React, { FunctionComponent } from "react";
+import React from "react";
 
 import "./custom-button.styles.scss";
 
-interface Props {
+type Props = {
   type: "button" | "submit";
   isGoogleSignIn: boolean;
   onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
-}
+};
 
-const CustomButton: FunctionComponent<Props> = ({
+const CustomButton: React.FC<Props> = ({
   children,
   isGoogleSignIn = false,
   ...otherProps

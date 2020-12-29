@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import "firebase/auth";
 
 import FormInput from "../form-input/form-input.component";
@@ -7,14 +7,14 @@ import { auth, createUserProfileDocument } from "../../firebase/firebase.utils";
 
 import "./sign-up.styles.scss";
 
-interface State {
+type State = {
   displayName: string;
   email: string;
   password: string;
   confirmPassword: string;
-}
+};
 
-class SignUp extends Component {
+class SignUp extends React.Component<{}, State> {
   state: State = {
     displayName: "",
     email: "",
@@ -24,8 +24,8 @@ class SignUp extends Component {
 
   handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = event.target;
-
-    this.setState({ [name]: value });
+    //TODO: works?
+    this.setState({ [name]: value } as { [P in keyof State]: State[P] });
   };
 
   handleSubmit = async (event: React.FormEvent) => {

@@ -6,12 +6,12 @@ import {
 } from "../collection-item/collection-item.component";
 import "./collection-preview.styles.scss";
 
-interface Props {
+type Props = {
   title: string;
   items: Item[];
-}
+};
 
-const CollectionPreview = ({ title, items }: Props) => {
+const CollectionPreview: React.FC<Props> = ({ title, items }) => {
   return (
     <div className="collection-preview">
       <h1 className="title">{title.toUpperCase()}</h1>

@@ -1,12 +1,17 @@
-import React, { Component } from "react";
+import React from "react";
 
 import FormInput from "../form-input/form-input.component";
 import CustomButton from "../custom-button/custom-button.component";
 import { auth, signInWithGoogle } from "../../firebase/firebase.utils";
 import "./sign-in.styles.scss";
 
-class SignIn extends Component {
-  state = {
+type State = {
+  email: string;
+  password: string;
+};
+
+class SignIn extends React.Component<{}, State> {
+  state: State = {
     email: "",
     password: "",
   };
@@ -26,8 +31,9 @@ class SignIn extends Component {
 
   handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = event.target;
-
-    this.setState({ [name]: value });
+    //TODO: does it work? write in stackOF
+    this.setState({ [name]: value } as { [P in keyof State]: State[P] });
+    // this.setState((current) => ({...current, [name]: value}));
   };
 
   render() {

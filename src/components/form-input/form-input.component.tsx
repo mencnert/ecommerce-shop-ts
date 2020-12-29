@@ -1,21 +1,17 @@
-import React, { FunctionComponent } from "react";
+import React from "react";
 
 import "./form-input.styles.scss";
 
-interface Props {
+type Props = {
   label: string;
   name: string;
   type: string;
   handleChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
   value: string;
   required: boolean;
-}
+};
 
-const FormInput: FunctionComponent<Props> = ({
-  handleChange,
-  label,
-  ...otherProps
-}) => {
+const FormInput: React.FC<Props> = ({ handleChange, label, ...otherProps }) => {
   return (
     <div className="group">
       <input className="form-input" onChange={handleChange} {...otherProps} />

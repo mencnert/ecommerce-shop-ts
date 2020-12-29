@@ -1,14 +1,14 @@
-import React, { Component } from "react";
+import React from "react";
 
 import MenuItem from "../menu-item/menu-item.component";
 import SECTIONS, { Section } from "./directory.data";
 import "./directory.styles.scss";
 
-interface State {
+type State = {
   sections: Section[];
-}
+};
 
-class Directory extends Component {
+class Directory extends React.Component<{}, State> {
   state: State = {
     sections: SECTIONS,
   };

@@ -6,15 +6,14 @@ import "./menu-item.styles.scss";
 
 type Props = Section & RouteComponentProps;
 
-const MenuItem = ({
+const MenuItem: React.FC<Props> = ({
   title,
   imageUrl,
   size,
   linkUrl,
   history,
-
   match,
-}: Props) => {
+}) => {
   return (
     <div
       className={`${size} menu-item`}

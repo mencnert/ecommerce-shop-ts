@@ -7,12 +7,12 @@ import { ReactComponent as Logo } from "../../assets/crown.svg";
 
 import "./header.styles.scss";
 
-interface Props {
+type Props = {
   //TODO: find currentUser type
   currentUser: any;
-}
+};
 
-const Header = ({ currentUser }: Props) => (
+const Header: React.FC<Props> = ({ currentUser }) => (
   <div className="header">
     <Link className="logo-container" to="/">
       <Logo className="logo" />
