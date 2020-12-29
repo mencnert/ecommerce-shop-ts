@@ -29,7 +29,8 @@
     "test": "react-scripts test",
     "test:all": "react-scripts test --watchAll=false",
     "eject": "react-scripts eject",
-    "prettify": "npx prettier --write .",
+    "prettier:write": "prettier --write .",
+    "prettier:check": "prettier --check .",
     "lint": "eslint src"
   },
   "eslintConfig": {
@@ -52,11 +53,12 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run prettify && npm run lint && npm run test:all",
-      "pre-push": "npm run lint && npm run test:all"
+      "pre-commit": "npm run prettier:check && npm run lint",
+      "pre-push": "npm run test:all"
     }
   },
   "devDependencies": {
-    "husky": "^4.3.6"
+    "husky": "^4.3.6",
+    "prettier": "^2.2.1"
   }
 }
