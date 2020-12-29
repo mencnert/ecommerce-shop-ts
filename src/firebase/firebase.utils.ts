@@ -17,7 +17,7 @@ firebase.initializeApp(config);
 
 export const createUserProfileDocument = async (
   userAuth: firebase.User | null,
-  additionalData: firebase.firestore.DocumentData
+  additionalData?: firebase.firestore.DocumentData
 ) => {
   if (!userAuth) return;
 
