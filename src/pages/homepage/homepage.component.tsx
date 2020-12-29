@@ -1,10 +1,11 @@
 import React from "react";
 
-import "./homepage.styles.scss";
-import Directory from "components/directory/directory.component";
+// components
+import Directory from "../../components/directory/directory.component";
 
-const HomePage = (props) => {
-  console.log(props);
+import "./homepage.styles.scss";
+
+const HomePage: React.FC = () => {
   return (
     <div className="homepage">
       <Directory />

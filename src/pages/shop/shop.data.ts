@@ -1,4 +1,18 @@
-const SHOP_DATA = [
+type Item = {
+  id: number;
+  name: string;
+  imageUrl: string;
+  price: number;
+};
+
+export type ShopDataModel = {
+  id: number;
+  title: string;
+  routeName: string;
+  items: Item[];
+};
+
+const SHOP_DATA: ShopDataModel[] = [
   {
     id: 1,
     title: "Hats",
