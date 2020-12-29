@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should match snapshot 1`] = `
+<div
+  className="collection-item"
+>
+  <div
+    className="image"
+    style={
+      Object {
+        "backgroundImage": "url(url)",
+      }
+    }
+  />
+  <div
+    className="collection-footer"
+  >
+    <span
+      className="name"
+    >
+      hello
+    </span>
+    <span
+      className="price"
+    >
+      20
+    </span>
+  </div>
+</div>
+`;

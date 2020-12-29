@@ -29,7 +29,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "test:all": "react-scripts test --watchAll=false",
+    "test:all": "react-scripts test --coverage --watchAll=false",
     "eject": "react-scripts eject",
     "prettier:write": "prettier --write .",
     "prettier:check": "prettier --check .",
@@ -60,6 +60,11 @@
     }
   },
   "devDependencies": {
+    "@types/enzyme": "^3.10.8",
+    "@types/enzyme-adapter-react-16": "^1.0.6",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.5",
+    "enzyme-to-json": "^3.6.1",
     "husky": "^4.3.6",
     "prettier": "^2.2.1"
   }

@@ -10,7 +10,7 @@ type Props = {
 
 const CustomButton: React.FC<Props> = ({
   children,
-  isGoogleSignIn = false,
+  isGoogleSignIn,
   ...otherProps
 }) => {
   return (
