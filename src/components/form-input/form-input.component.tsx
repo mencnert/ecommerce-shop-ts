@@ -6,7 +6,7 @@ type Props = {
   label: string;
   name: string;
   type: string;
-  handleChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  handleChange: React.ChangeEventHandler<HTMLInputElement>;
   value: string;
   required: boolean;
 };
