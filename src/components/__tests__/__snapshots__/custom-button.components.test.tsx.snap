@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`snapshots is type "button" and is goole sign in 1`] = `
+<button
+  className="google-sign-in custom-button"
+  type="button"
+/>
+`;
+
+exports[`snapshots is type "submit" and is not goole sign in 1`] = `
+<button
+  className=" custom-button"
+  type="submit"
+/>
+`;
